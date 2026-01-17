@@ -210,4 +210,8 @@ __marimo__/
 # raw_csv
 currencies_data.csv
 
+# macOS system files
+.DS_Store
+**/.DS_Store
+
 
