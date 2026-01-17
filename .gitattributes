@@ -1,0 +1,2 @@
+data_layer/raw/acidentes2024_todas_causas_tipos.csv filter=lfs diff=lfs merge=lfs -text
+data_layer/raw/acidentes2025_todas_causas_tipos.csv filter=lfs diff=lfs merge=lfs -text

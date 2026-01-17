@@ -210,5 +210,4 @@ __marimo__/
 # raw_csv
 currencies_data.csv
 
-# Arquivos CSV grandes (excedem limite de 100MB do GitHub)
-data_layer/raw/acidentes*.csv
+
