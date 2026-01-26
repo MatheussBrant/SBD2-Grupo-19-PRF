@@ -6,10 +6,7 @@ CREATE TABLE dw.dim_tem (
     srk_tem SERIAL PRIMARY KEY,
     dat_ocr DATE NOT NULL,
     ano_arq INT,
-    mes_num INT,
-    dia_num INT,
-    dia_sem VARCHAR(20),
-    hor_ocr TIME,
+    dia_sem_num INT,
     fas_dia VARCHAR(50)
 );
 
@@ -41,7 +38,7 @@ CREATE TABLE dw.dim_cir (
 DROP TABLE IF EXISTS dw.dim_pes CASCADE;
 CREATE TABLE dw.dim_pes (
     srk_pes SERIAL PRIMARY KEY,
-    cod_pes BIGINT,
+    cod_pes VARCHAR(50),
     tip_env VARCHAR(100),
     est_fis VARCHAR(100),
     fax_eta VARCHAR(100),
@@ -52,7 +49,7 @@ CREATE TABLE dw.dim_pes (
 DROP TABLE IF EXISTS dw.dim_vei CASCADE;
 CREATE TABLE dw.dim_vei (
     srk_vei SERIAL PRIMARY KEY,
-    cod_vei BIGINT,
+    cod_vei VARCHAR(50),
     tip_vei VARCHAR(100),
     fax_ida VARCHAR(100)
 );
@@ -66,5 +63,5 @@ CREATE TABLE dw.fat_sin (
     srk_cir INT NOT NULL REFERENCES dw.dim_cir (srk_cir),
     srk_pes INT NOT NULL REFERENCES dw.dim_pes (srk_pes),
     srk_vei INT REFERENCES dw.dim_vei (srk_vei),
-    cod_sin BIGINT NOT NULL
+    cod_sin VARCHAR(50) NOT NULL
 );
