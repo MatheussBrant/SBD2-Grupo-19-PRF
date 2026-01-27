@@ -301,9 +301,9 @@ SELECT
     ROUND(total_sinistros * (1 + (total_mortos * 100.0 / NULLIF(total_envolvidos, 0)) / 10), 2) AS indice_periculosidade,
     -- Classificação de risco
     CASE 
-        WHEN ROUND(total_mortos * 100.0 / NULLIF(total_envolvidos, 0), 2) >= 8 THEN '🔴 ALTO RISCO'
-        WHEN ROUND(total_mortos * 100.0 / NULLIF(total_envolvidos, 0), 2) >= 5 THEN '🟡 RISCO MODERADO'
-        ELSE '🟢 RISCO BAIXO'
+        WHEN ROUND(total_mortos * 100.0 / NULLIF(total_envolvidos, 0), 2) >= 8 THEN 'ALTO RISCO'
+        WHEN ROUND(total_mortos * 100.0 / NULLIF(total_envolvidos, 0), 2) >= 5 THEN 'RISCO MODERADO'
+        ELSE 'RISCO BAIXO'
     END AS classificacao_risco
 FROM analise_fase_dia
 ORDER BY 
